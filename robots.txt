@@ -1,0 +1,41 @@
+# Robots.txt para Oceansbits
+# Control de rastreo para motores de búsqueda
+
+# Permitir a todos los bots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.pdf$
+Disallow: /api/
+
+# Específico para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Específico para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquear bots maliciosos comunes
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Ubicación del sitemap
+Sitemap: https://oceansbits.com/sitemap.xml
+Sitemap: https://oceansbits.sv/sitemap.xml
+
+# Tiempo de espera para rastreo
+Crawl-delay: 0
+
+# Configuración de búsqueda
+# No indexar parámetros de URL específicos

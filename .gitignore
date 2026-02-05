@@ -1,0 +1,58 @@
+# .gitignore - Archivos a ignorar en Git
+
+# Build artifacts
+dist/
+build/
+*.min.js
+*.min.css
+*.min.html
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Dependencies
+.pnp
+.pnp.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.eslintcache
+
+# Temporary files
+*.tmp
+*.temp
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Production
+dist/
+build/

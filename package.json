@@ -1,0 +1,22 @@
+{
+  "name": "oceansbits-tests",
+  "version": "1.0.0",
+  "description": "Test suite para Oceansbits JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "oceansbits",
+    "testing",
+    "jest"
+  ],
+  "author": "Oceansbits Team",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@testing-library/dom": "^9.0.0"
+  }
+}
