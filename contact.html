@@ -8,37 +8,47 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#2563eb", // Primary blue from the screenshot
-              "background-light": "#f9fafb",
-              "background-dark": "#111827",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A85D1", // Extracted from logo blue
+                        secondary: "#0C4A7A", // Darker blue from logo
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#0B1120",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#151F32",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(135deg, #1A85D1 0%, #0C4A7A 100%)',
+                        'stripe-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'%239C92AC\\' fill-opacity=\\'0.1\\' fill-rule=\\'evenodd\\'%3E%3Cpath d=\\'M0 40L40 0H20L0 20M40 40V20L20 40\\'/%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                },
             },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-            },
-          },
-        },
-      };
+        };
     </script>
 <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      .bg-grid-pattern {
-        background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
-        background-size: 24px 24px;
-      }
-      .dark .bg-grid-pattern {
-        background-image: radial-gradient(circle, #374151 1px, transparent 1px);
-      }
-    </style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-panel {
+            background: rgba(21, 31, 50, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
 <nav class="fixed w-full z-50 glass-panel border-b border-gray-200 dark:border-gray-800">

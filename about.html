@@ -7,44 +7,48 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
+                        primary: "#1A85D1", // Extracted from logo blue
+                        secondary: "#0C4A7A", // Darker blue from logo
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#0B1120",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#151F32",
                     },
                     fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
                     },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(135deg, #1A85D1 0%, #0C4A7A 100%)',
+                        'stripe-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'%239C92AC\\' fill-opacity=\\'0.1\\' fill-rule=\\'evenodd\\'%3E%3Cpath d=\\'M0 40L40 0H20L0 20M40 40V20L20 40\\'/%3E%3C/g%3E%3C/svg%3E')",
+                    }
                 },
             },
-        }
+        };
     </script>
 <style>
-        body {
-            font-family: 'Manrope', sans-serif;
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .ocean-gradient {
-            background: linear-gradient(135deg, rgba(19, 127, 236, 0.05) 0%, rgba(19, 127, 236, 0.1) 100%);
+        .dark .glass-panel {
+            background: rgba(21, 31, 50, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .glass-card {
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.8);
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
         }
-        .dark .glass-card {
-            background: rgba(16, 25, 34, 0.8);
-        }
-    </style>
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-50 transition-colors duration-300">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
@@ -53,7 +57,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-20">
 <div class="flex-shrink-0 flex items-center">
-<img alt="Oceans Bits Logo" class="h-10 w-auto mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAle4_KfqNUgAty087z7TB8VwqAbzhQ0QcmSsY024CzwCkZJqAyYdsqiSd9bW8Oj5n0guGcKETg-5MdIYcVV2C0WwHzZWKatDi66wS3OLpyRQ-KmWi6ZZrYnodovTGB9mKHS7g7_ARbmlwBwEX-gRbRMry2CWApnPEJgk7L4yfq9hS3AaBgYMkdrWLT87uPY7lFJsK58dAoI_krUbBqQpa9JWhmNgS9A8-y3YQCuFAY193SeX7sAh-mfSGv-SW0cGPPhcWImFNi3CA"/>
+<img alt="Oceans Bits Logo" class="h-10 w-auto mr-3" src="img/Recurso 1.png"/>
 <span class="font-display font-bold text-xl tracking-tight text-gray-900 dark:text-white">Oceansbits</span>
 </div>
 <div class="hidden md:flex items-center space-x-8">
@@ -80,17 +84,21 @@
 <div class="absolute top-0 left-0 w-full h-full" data-alt="Abstract dot pattern for tech background" style="background-image: radial-gradient(circle at 2px 2px, #137fec 1px, transparent 0); background-size: 40px 40px;"></div>
 </div>
 <div class="max-w-[960px] mx-auto text-center relative z-10">
-<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">Digital Excellence Agency</span>
+<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">Agencia de Desarrollo de Software</span>
 <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-[-0.03em] mb-6">
                         ¡Hola! <br/><span class="text-primary">Somos Oceansbits.</span>
 </h1>
 <p class="text-lg md:text-xl text-[#4c739a] dark:text-slate-400 font-medium max-w-[700px] mx-auto leading-relaxed">
-                        Navigating the vast digital landscape to bring you unparalleled excellence and innovation. We build bridges between bold ideas and technological brilliance.
+                        En Oceansbits desarrollamos software a la medida, páginas web funcionales y soluciones tecnológicas inteligentes que impulsan el crecimiento de los negocios. Nos especializamos en facturación electrónica y sistemas ERP, ayudando a emprendedores, PyMES y empresas consolidadas a optimizar procesos, cumplir normativas y tomar mejores decisiones mediante tecnología eficiente, segura y escalable.
                     </p>
+<!-- Call to Action Buttons -->  
+ <!--                  
 <div class="mt-10 flex flex-wrap justify-center gap-4">
 <button class="h-14 px-8 bg-primary text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/30 transition-all">Explore Our Work</button>
 <button class="h-14 px-8 bg-white dark:bg-slate-800 border border-[#cfdbe7] dark:border-slate-700 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Our Story</button>
 </div>
+-->
+<!-- End Call to Action Buttons -->
 </div>
 </section>
 <!-- Mission & Vision Cards -->
@@ -103,9 +111,9 @@
 <div class="size-16 flex items-center justify-center rounded-2xl bg-primary/10 text-primary mb-8">
 <span class="material-symbols-outlined text-4xl font-light">water_drop</span>
 </div>
-<h3 class="text-2xl font-extrabold mb-4">Our Mission</h3>
+<h3 class="text-2xl font-extrabold mb-4">Nuestra Misión</h3>
 <p class="text-lg text-[#4c739a] dark:text-slate-400 leading-relaxed">
-                        To build a thriving digital ecosystem—like a coral reef—where innovation, creativity, and technical excellence live in harmony. We aim to foster growth that is both beautiful and resilient.
+                        Desarrollar soluciones de software innovadoras y personalizadas que permitan a las empresas automatizar sus procesos, gestionar su información de forma eficiente y adaptarse a la transformación digital, con especial enfoque en facturación electrónica y sistemas ERP confiables.
                     </p>
 <div class="mt-8 pt-8 border-t border-[#e7edf3] dark:border-slate-800">
 <div class="flex items-center gap-3 text-primary font-bold cursor-pointer group/link">
@@ -122,9 +130,9 @@
 <div class="size-16 flex items-center justify-center rounded-2xl bg-white/20 text-white mb-8">
 <span class="material-symbols-outlined text-4xl font-light">flashlight_on</span>
 </div>
-<h3 class="text-2xl font-extrabold mb-4">Our Vision</h3>
+<h3 class="text-2xl font-extrabold mb-4">Nuestra Visión</h3>
 <p class="text-lg text-white/80 leading-relaxed">
-                        To be the lighthouse in the digital sea, guiding brands toward sustainable growth and technological brilliance. We illuminate the path through complex challenges with clarity and expertise.
+                        Ser una empresa líder en soluciones tecnológicas en la región, reconocida por la calidad de nuestro software, la confianza de nuestros clientes y nuestra capacidad de crear sistemas que evolucionan junto a los negocios en un entorno digital en constante cambio.
                     </p>
 <div class="mt-8 pt-8 border-t border-white/20">
 <div class="flex items-center gap-3 text-white font-bold cursor-pointer group/link">
@@ -137,20 +145,25 @@
 <section class="w-full max-w-[960px] px-6 py-24">
 <div class="flex flex-col md:flex-row gap-16 items-center">
 <div class="flex-1 space-y-6">
-<h2 class="text-3xl font-black tracking-tight">The Oceansbits Narrative</h2>
+<h2 class="text-3xl font-black tracking-tight">Oceansbits</h2>
 <p class="text-lg text-[#4c739a] dark:text-slate-400 leading-relaxed">
-                            Founded on the principle that digital solutions should be as deep and powerful as the ocean itself, Oceansbits has grown from a small collective of designers into a full-scale digital excellence agency.
+                            Oceansbits nace con el propósito de crear <strong>soluciones tecnológicas que se adapten a cada negocio.</strong>
+Nos especializamos en <strong> a la medida, páginas web, facturación electrónica y sistemas ERP,</strong> ayudando a empresas a optimizar procesos, cumplir normativas y crecer de forma ordenada.
                         </p>
 <p class="text-lg text-[#4c739a] dark:text-slate-400 leading-relaxed">
-                            We don't just build websites; we create digital experiences that breathe. Our team combines technical brilliance with a deep-rooted passion for digital ecosystems, ensuring every bit of data serves a larger purpose.
+                            Desarrollamos tecnología funcional, escalable y pensada para el futuro.
+                        </p>
+<p class="text-lg text-[#4c739a] dark:text-slate-400 leading-relaxed">
+                            En Oceansbits, <strong> tecnología trabaja para tu empresa.</strong>
+
                         </p>
 <div class="flex gap-4 items-center pt-4">
 <div class="size-12 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
 <img alt="Founder Portrait" class="w-full h-full object-cover" data-alt="Portrait of the founder of Oceansbits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu89Xn1703otUl4F20R9ZqpHa7g-FNSBNDsos1J-8SyorRNPmPtcM2iDwzxwcleHgjA3bS_wkvedqJ5G45hVqEmm2-3BUT-0OBu4hEJjxL6YuUwMow-UqaAtXsZNAWNgCFGpYEtfwfnRfhaFXe7LOKy00T3vOTyemHWD3pe4LkT80B5W4AuW1f7G3XumbGZE_63-nMPtIq88naph1vdwTJ_qq_lSBlFwgU-MXXkPZJgzJws3W03Xko3dKecKNkKK4JZ0GJ5uzmfGbt"/>
 </div>
 <div>
-<p class="font-bold">Keoni Kai</p>
-<p class="text-sm text-primary">Founder &amp; Chief Navigator</p>
+<p class="font-bold">CEO de Oceansbits</p>
+<p class="text-sm text-primary">ceo &amp; CEO de Oceansbits</p>
 </div>
 </div>
 </div>
@@ -159,8 +172,8 @@
 <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors z-10"></div>
 <img alt="Office Culture" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="Modern high-tech office with ocean view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ1lkT6lCSDrdSemdi0rIojpNihRSnTAttkHxMZXKoQdsePn6It1-HnnXZD22TgX7SVpwA1hJs6JhKN04kyweZ94Eio5lCGoTQJbtG9FiZM-bY9Og99-tmeHmKNmn65_kNHysMLUrTM3wSyFZgBvvdFInY1BBOHzeG631b7z5_CN5uKzK3TxUNq8TLigYgXJ6hbtLm4iBU0K8MIfBJIeSkSp-P3BmEwJAt7KAEt56DOV_fDQFuxxg2Sw3fe0ihQxn7JdYpC3vUPu8R"/>
 <div class="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-2xl z-20 border border-white/20">
-<p class="text-sm font-bold text-primary mb-1 italic">"Deep work, deep impact."</p>
-<p class="text-xs text-[#4c739a] dark:text-slate-300">Our Honolulu HQ, where the magic happens.</p>
+<p class="text-sm font-bold text-primary mb-1 italic">"Trabajo profundo, impacto profundo."</p>
+<p class="text-xs text-[#4c739a] dark:text-slate-300">Estas en Oceansbits donde sucede la magia.</p>
 </div>
 </div>
 </div>
