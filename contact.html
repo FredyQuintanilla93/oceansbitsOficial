@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Oceans Bits</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb", // Primary blue from the screenshot
+              "background-light": "#f9fafb",
+              "background-dark": "#111827",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .bg-grid-pattern {
+        background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .dark .bg-grid-pattern {
+        background-image: radial-gradient(circle, #374151 1px, transparent 1px);
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<nav class="fixed w-full z-50 glass-panel border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<img alt="Oceans Bits Logo" class="h-10 w-auto mr-3" src="img/Recurso 1.png"/>
+<span class="font-display font-bold text-xl tracking-tight text-gray-900 dark:text-white">Oceansbits</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Soluciones digitales</a>
+<!--<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Precios</a>-->
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="about.html">Quiénes somos</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="contact.html">Contacto</a>
+<a class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-secondary transition-all shadow-lg shadow-primary/30" href="#">
+                        Facturar
+                    </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="relative overflow-hidden min-h-screen">
+<div class="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+<section class="relative z-10 py-16 sm:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-10">
+<div>
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                Sirviendo con orgullo a El Salvador
+                            </span>
+<h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
+                                Vamos a construir algo <br/>
+<span class="text-primary">grande juntos.</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+                                Acompañamos a emprendedores, PyMES y empresas en su crecimiento digital con tecnología confiable y soporte local en El Salvador. Cuéntanos sobre tu proyecto y descubre cómo Oceans Bits puede ayudarte a optimizar procesos, cumplir con la facturación electrónica y escalar tu operación sin complicaciones.
+                            </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-icons">location_on</span>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white">Nuestra sede</h4>
+<p class="text-slate-600 dark:text-slate-400">La Unión, El Salvador</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-icons">email</span>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white">Envíanos un correo electrónico</h4>
+<p class="text-slate-600 dark:text-slate-400">info@oceansbits.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-icons">public</span>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 dark:text-white">Redes Sociales</h4>
+<div class="flex gap-4 mt-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-slate-200 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Confianza para los innovadores</p>
+<div class="flex flex-wrap gap-8 opacity-60">
+<span class="font-bold text-slate-400 text-sm">Atención personalizada</span>
+<span class="font-bold text-slate-400 text-sm">Soporte local</span>
+<span class="font-bold text-slate-400 text-sm">Soluciones escalables</span>
+<!--<span class="font-bold text-slate-400 text-sm">Flutter</span>-->
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-10 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800">
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="full_name">Nombre completo</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="full_name" name="full_name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="business_name">Nombre de la empresa</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="business_name" name="business_name" placeholder="Your Company S.A." type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Dirección de correo electrónico</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="email" name="email" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="phone">Número de teléfono de contacto</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="phone" name="phone" placeholder="+503 2200-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="message">Cuéntanos sobre tu proyecto</label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="message" name="message" placeholder="¿Qué podemos ayudarte a construir?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-primary/25 flex items-center justify-center gap-2 group" type="submit">
+<span>Enviar Mensaje</span>
+<span class="material-icons text-sm group-hover:translate-x-1 transition-transform">send</span>
+</button>
+<p class="text-xs text-center text-slate-500 dark:text-slate-400">
+                                Al hacer clic en enviar, aceptas nuestra <a class="underline" href="#">Política de Privacidad</a> y <a class="underline" href="#">Términos de Servicio</a>.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-surface-light dark:bg-surface-dark py-16">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-primary rounded-3xl p-10 md:p-16 relative overflow-hidden text-center">
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-black opacity-10 rounded-full"></div>
+<h2 class="relative text-3xl md:text-4xl font-display font-bold text-white mb-6">¿Listo para digitalizar tu negocio?</h2>
+<p class="relative text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                    En Oceans Bits transformamos tus ideas en soluciones de software hechas a la medida, diseñadas para impulsar el crecimiento de tu empresa en El Salvador.
+                </p>
+<div class="relative flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-3 bg-white text-primary font-bold rounded-full hover:bg-gray-50 transition-colors shadow-lg" href="#">
+                        Obtén un presupuesto gratuito
+                    </a>
+<a class="px-8 py-3 bg-blue-700 text-white font-bold rounded-full hover:bg-blue-800 transition-colors border border-blue-500" href="#">
+                        Contacto con soporte técnico
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<footer class="bg-gray-50 dark:bg-black pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center mb-4">
+<img alt="Oceans Bits Logo" class="h-8 w-auto mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV-bWzY237WwuLHHH_8nXNS2_AVPRcQCtLSViH5_FKUve77uoP4V0Q1e7rnU7pmT1guyA1B6mGUlFVR8042ufS8NkQAavaVUC2tvVpGkAtoK6dbbmFr-S6ctLgm9fNG2CqlrtYUwBZpofhf1Uj54WA7rq2SoQIJAeEFJoBgqG0toe3Vpm6DXNNaFeAcERDd5IfeM4Tkjr_OlqzK0ChzFPCLPonNc2tVka3iIPjImnMpvL0wjRqlYuzoRpcn3apv5JKX4tjYXxzIYY"/>
+<span class="font-display font-bold text-lg tracking-tight text-gray-900 dark:text-white">OCEANS BITS</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                        Liderando la transformación digital en El Salvador con soluciones de software de primera calidad.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Servicios</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Desarrollo Web</a></li>
+<li><a class="hover:text-primary" href="#">Aplicaciones móviles</a></li>
+<li><a class="hover:text-primary" href="#">Diseño UI/UX</a></li>
+<li><a class="hover:text-primary" href="#">Consultoria</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Compañia</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Sobre nosotros</a></li>
+<!--<li><a class="hover:text-primary" href="#">Careers</a></li>-->
+<!--<li><a class="hover:text-primary" href="#">Blog</a></li>-->
+<li><a class="hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Conecta</h4>
+<div class="flex space-x-4 mb-4">
+<a class="text-gray-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-gray-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+<p class="text-xs text-gray-500">San Miguel, El Salvador</p>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2026 Oceans Bits. Todos los derechos reservados.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#">Política de Privacidad</a>
+<a class="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#">Términos de Servicios</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/planes.js"></script>
+</body></html>

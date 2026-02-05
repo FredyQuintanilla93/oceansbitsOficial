@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oceans Bits - Custom Software Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A85D1", // Extracted from logo blue
+                        secondary: "#0C4A7A", // Darker blue from logo
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#0B1120",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#151F32",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(135deg, #1A85D1 0%, #0C4A7A 100%)',
+                        'stripe-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'%239C92AC\\' fill-opacity=\\'0.1\\' fill-rule=\\'evenodd\\'%3E%3Cpath d=\\'M0 40L40 0H20L0 20M40 40V20L20 40\\'/%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-panel {
+            background: rgba(21, 31, 50, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+<nav class="fixed w-full z-50 glass-panel border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<img alt="Oceans Bits Logo" class="h-10 w-auto mr-3" src="img/Recurso 1.png"/>
+<span class="font-display font-bold text-xl tracking-tight text-gray-900 dark:text-white">Oceansbits</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Soluciones digitales</a>
+<!--<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Precios</a>-->
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="about.html">Quiénes somos</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="contact.html">Contacto</a>
+<a class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-secondary transition-all shadow-lg shadow-primary/30" href="#">
+                        Facturar
+                    </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl dark:bg-primary/5"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-3xl dark:bg-indigo-500/5"></div>
+<div class="absolute inset-0 bg-stripe-pattern opacity-30"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="animate-fade-in">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-semibold uppercase tracking-wide mb-6 border border-blue-100 dark:border-blue-800">
+<span class="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
+                       Iniciar Facturación Electrónica
+                    </div>
+<h1 class="text-5xl lg:text-6xl font-display font-bold leading-tight text-gray-900 dark:text-white mb-6">
+                        Facturación Electrónica y <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Software a la Medida para El Salvador</span>
+</h1>
+<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
+                        En Oceansbits, desarrollamos plataformas de Facturación Electrónica, ERP en la nube y API fiscales, cumpliendo al 100 % con los lineamientos del Ministerio de Hacienda, ayudando a las empresas a crecer sin fricciones técnicas ni legales.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1" href="contact.html">
+                           Facturación Electrónica
+                            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+<!--<a class="inline-flex justify-center items-center px-8 py-3.5 border border-gray-200 dark:border-gray-700 text-base font-medium rounded-lg text-gray-700 dark:text-gray-200 bg-white dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#">
+                            Casos reales
+                        </a>-->
+</div>
+</div>
+<div class="relative lg:h-[500px] w-full flex items-center justify-center animate-fade-in" style="animation-delay: 0.2s;">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-[2rem] transform rotate-3 scale-95 blur-xl"></div>
+<div class="relative w-full h-full bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<div class="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex gap-2 items-center bg-gray-50 dark:bg-gray-800/50">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+<div class="ml-4 flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full max-w-[200px]"></div>
+</div>
+<div class="p-6 grid grid-cols-12 gap-4 h-full bg-gradient-to-br from-white to-gray-50 dark:from-surface-dark dark:to-gray-900">
+<div class="col-span-3 space-y-3">
+<div class="h-8 w-24 bg-gray-200 dark:bg-gray-700 rounded-md"></div>
+<div class="h-4 w-full bg-gray-100 dark:bg-gray-800 rounded opacity-50"></div>
+<div class="h-4 w-3/4 bg-gray-100 dark:bg-gray-800 rounded opacity-50"></div>
+<div class="h-4 w-5/6 bg-gray-100 dark:bg-gray-800 rounded opacity-50"></div>
+</div>
+<div class="col-span-9 space-y-4">
+<div class="flex justify-between">
+<div class="h-8 w-32 bg-primary/20 rounded-md"></div>
+<div class="h-8 w-8 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="h-24 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800/30 p-3">
+<div class="w-8 h-8 rounded bg-primary/20 mb-2"></div>
+<div class="h-2 w-12 bg-primary/40 rounded"></div>
+</div>
+<div class="h-24 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-800/30 p-3">
+<div class="w-8 h-8 rounded bg-purple-500/20 mb-2"></div>
+<div class="h-2 w-12 bg-purple-500/40 rounded"></div>
+</div>
+<div class="h-24 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800/30 p-3">
+<div class="w-8 h-8 rounded bg-green-500/20 mb-2"></div>
+<div class="h-2 w-12 bg-green-500/40 rounded"></div>
+</div>
+</div>
+<div class="h-40 bg-white dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm p-4 relative overflow-hidden">
+<svg class="absolute bottom-0 left-0 right-0 h-24 w-full" preserveAspectRatio="none">
+<path d="M0,80 C100,70 200,90 300,50 C400,10 500,40 600,20 L600,100 L0,100 Z" fill="url(#gradient)" opacity="0.2"></path>
+<path d="M0,80 C100,70 200,90 300,50 C400,10 500,40 600,20" fill="none" stroke="#1A85D1" stroke-width="3"></path>
+<defs>
+<linearGradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#1A85D1;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#1A85D1;stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+<div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400">code_blocks</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase">Alta disponibilidad</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">99.9%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="py-10 border-y border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-8">Trusted Tech Stack</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">React</span>
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">Node.js</span>
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">Python</span>
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">AWS</span>
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">Next.js</span>
+<span class="text-xl font-bold font-display text-gray-700 dark:text-gray-300">Flutter</span>
+</div>
+</div>
+</div>-->
+<section class="py-24 relative overflow-hidden bg-secondary">
+<div class="absolute inset-0 bg-gradient-to-br from-[#0C4A7A] to-[#061e33]"></div>
+<div class="absolute inset-0 bg-stripe-pattern opacity-10 mix-blend-overlay"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+<div class="mb-12 lg:mb-0">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-100 text-xs font-semibold uppercase tracking-wide mb-6">
+<span class="material-symbols-outlined text-sm mr-1.5 filled">verified</span>
+                     Facturación Electrónica en El Salvador, sin complicaciones
+                </div>
+<h2 class="text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                    Cumple con Hacienda, automatiza tu negocio <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">y escala con confianza.</span>
+</h2>
+<p class="text-lg text-blue-100 mb-8 max-w-lg leading-relaxed">
+                    Nuestra solución de Facturación Electrónica está diseñada para cumplir con todas las normativas vigentes del Ministerio de Hacienda, permitiendo emitir, validar y almacenar DTE de forma segura, rápida y automatizada.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+<div class="flex flex-col">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-blue-300 mr-2">api</span>
+<h3 class="font-bold text-white">API de Facturación Electrónica</h3>
+</div>
+<p class="text-sm text-blue-200">Ideal para empresas de software, ERP, POS y e-commerce, REST API, Emisión automática de DTE, Respuestas en tiempo real.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center mb-2">
+<span class="material-symbols-outlined text-blue-300 mr-2">desktop_windows</span>
+<h3 class="font-bold text-white">Sistema de Facturación</h3>
+</div>
+<p class="text-sm text-blue-200">Pensado para emprendedores y microempresas, emisión desde cualquier dispositivo, cumplimiento legal garantizado.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex justify-center items-center px-6 py-3.5 border border-transparent text-base font-medium rounded-lg text-secondary bg-white hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1" href="#">
+                        Ver planes de facturación
+                    </a>
+<a class="inline-flex justify-center items-center px-6 py-3.5 border border-blue-400/30 text-base font-medium rounded-lg text-white hover:bg-white/10 transition-all" href="#">
+                        Documentación técnica API
+                        <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative lg:h-[500px] flex items-center justify-center">
+<div class="relative w-full max-w-md bg-surface-dark border border-gray-700 rounded-2xl shadow-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-all duration-500 group">
+<div class="bg-gray-800 px-4 py-3 flex items-center gap-2 border-b border-gray-700">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+</div>
+<div class="ml-4 flex-1 bg-gray-900 h-6 rounded text-xs text-gray-500 flex items-center px-2 font-mono overflow-hidden whitespace-nowrap text-ellipsis">
+                            api.oceansbits.com/v1/dte/emit
+                        </div>
+</div>
+<div class="p-6 bg-[#0d1117] font-mono text-sm leading-6 overflow-hidden relative">
+<div class="text-gray-400 mb-2">// Sending DTE to Hacienda</div>
+<div class="text-purple-400">const <span class="text-blue-400">invoice</span> = <span class="text-white">await</span> dte.create({</div>
+<div class="pl-4 text-sky-300">type: <span class="text-orange-300">'03'</span>, <span class="text-gray-500">// CCF</span></div>
+<div class="pl-4 text-sky-300">receiver: {</div>
+<div class="pl-8 text-sky-300">nit: <span class="text-orange-300">'0614-200995-102-1'</span>,</div>
+<div class="pl-8 text-sky-300">name: <span class="text-orange-300">'Empresa S.A. de C.V.'</span></div>
+<div class="pl-4 text-sky-300">},</div>
+<div class="pl-4 text-sky-300">items: [...]</div>
+<div class="text-white">});</div>
+<br/>
+<div class="text-gray-400">// Response</div>
+<div class="text-green-400">{ "status": "PROCESADO", "sello": "2023..." }</div>
+<div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur-xl group-hover:opacity-30 transition duration-1000"></div>
+</div>
+<div class="bg-gray-800 px-4 py-2 border-t border-gray-700 flex justify-between items-center text-xs text-gray-400">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                             System Operational
+                        </div>
+<div>98ms latency</div>
+</div>
+</div>
+<div class="absolute -bottom-4 -left-4 md:bottom-10 md:-left-10 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">qr_code_2</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase">Generación</p>
+<p class="text-sm font-bold text-gray-900 dark:text-white">Qr y  &amp; JSON instantáneos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark relative" id="planes">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-16 text-center">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4">Solución ERP Integrada</h2>
+<p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Elige el plan perfecto para tu empresa. Todos nuestros planes incluyen actualizaciones automáticas según normativas de Ministerio de Hacienda.
+            </p>
+</div>
+<div class="flex justify-center mb-12">
+
+    <!--PRUEBAS-->
+    <div class="bg-white dark:bg-surface-dark p-1 rounded-full border border-gray-200 dark:border-gray-700 inline-flex relative w-full max-w-md">
+
+  <!-- INDICADOR -->
+  <div id="indicator"
+       class="absolute top-0 left-0 h-full w-1/3 bg-primary rounded-full transition-all duration-300"></div>
+
+  <button class="plan-btn relative z-10 w-1/3 px-3 py-2 text-sm font-medium text-white"
+          data-plan="ancla">
+   API
+  </button>
+
+  <button class="plan-btn relative z-10 w-1/3 px-8 py-2 text-sm font-medium text-gray-500 dark:text-gray-400"
+          data-plan="velero">
+    Facturación Simple
+  </button>
+
+  <button class="plan-btn relative z-10 w-1/3 px-8 py-2 text-sm font-medium text-gray-500 dark:text-gray-400"
+          data-plan="marea">
+    Facturación + ERP
+  </button>
+</div>
+
+</div>
+
+<div class="plan-card group relative ..." data-plan="ancla">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+            <div class="absolute top-0 right-0 p-6">
+            <span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">anchor</span>
+            </div>
+        <h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan ANCLA</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Para profesionales y pequeños negocios.</p>
+        <div class="flex items-baseline mb-6">
+        <span class="text-4xl font-bold text-gray-900 dark:text-white">$9.99</span>
+        <span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+        </div>
+        <a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Empezar ahora</a>
+            <div class="mt-8">
+            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Incluye:</p>
+            <ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+            <li><span class="material-symbols-outlined">check_circle</span> 500 DTEs</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Almacenamiento DTE (10 años)</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Gestión de Certificados firma</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Anulación DTE</li>
+             <li><span class="material-symbols-outlined">check_circle</span> Logo DTE</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Soporte por Correo</li>
+            </ul>
+            </div>
+        </div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border-2 border-primary transform md:-translate-y-4 z-10">
+<div class="absolute top-0 inset-x-0 -mt-4 flex justify-center">
+<!--<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Más Popular</span>-->
+</div>
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-blue-100 dark:text-blue-900 group-hover:text-primary/20 transition-colors">sailing</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan VELERO</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Pensado para PyMES en crecimiento.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$17.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Sambox de prueba incluido</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Paquete ANCLA, más:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 1,000 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> 3 Usuarios</li>
+<li><span class="material-symbols-outlined">check_circle</span> Anexo F07</li>
+<li><span class="material-symbols-outlined">check_circle</span> Comprobación Recepcion DTE</li>
+</ul>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">tsunami</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">MAREA DIGITAL</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Solución empresarial de alto volumen.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$25.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Contactar Ventas</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Paquete VELERO, más:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 1,500 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> Usuarios Ilimitados</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 20 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Soporte Prioritario 24/7</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="plan-card group relative ..." data-plan="velero">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">anchor</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan ANCLA</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Ideal para profesionales independientes y pequeños negocios.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$17.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Empezar ahora</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Incluye:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 500 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> 1 Usuario</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 1 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Módulo de Facturación</li>
+<li><span class="material-symbols-outlined">check_circle</span> Reportes Básicos</li>
+<li><span class="material-symbols-outlined">check_circle</span> Soporte por Correo</li>
+</ul>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border-2 border-primary transform md:-translate-y-4 z-10">
+<div class="absolute top-0 inset-x-0 -mt-4 flex justify-center">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Más Popular</span>
+</div>
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-blue-100 dark:text-blue-900 group-hover:text-primary/20 transition-colors">sailing</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan VELERO</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Para PyMES en crecimiento que necesitan más control.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$29.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-primary text-white font-bold text-center rounded-xl hover:bg-secondary transition-all duration-300 shadow-lg shadow-primary/30" href="#">Prueba Gratis 14 días</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Todo lo de ANCLA, más:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 1,000 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> 3 Usuarios</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 5 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Personalización de Logos</li>
+<li><span class="material-symbols-outlined">check_circle</span> Reportes Medios</li>
+<li><span class="material-symbols-outlined">check_circle</span> Envio de DTEs Masivos</li>
+</ul>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">tsunami</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">MAREA DIGITAL</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Solución empresarial completa para alto volumen.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$59.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Contactar Ventas</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Potencia total:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 2,500 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> Usuarios Ilimitados</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 20 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Soporte Prioritario 24/7</li>
+<li><span class="material-symbols-outlined">check_circle</span> Copias de seguridad de clientes</li>
+<li><span class="material-symbols-outlined">check_circle</span> Reportes avanzados</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="plan-card group relative ..." data-plan="marea">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">anchor</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan ANCLA + ERP</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">IPara iniciar sin complicaciones.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$49.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Empezar ahora</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Incluye:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 800 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> 1 Usuario</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 1 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Gestión de Certificados firma</li>
+<li><span class="material-symbols-outlined">check_circle</span> Anulación DTE</li>
+<li><span class="material-symbols-outlined">check_circle</span> Logo DTE</li>
+<li><span class="material-symbols-outlined">check_circle</span> Soporte por Correo</li>
+<li><span class="material-symbols-outlined">check_circle</span> 5 Módulos</li>
+</ul>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border-2 border-primary transform md:-translate-y-4 z-10">
+<div class="absolute top-0 inset-x-0 -mt-4 flex justify-center">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Más Popular</span>
+</div>
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-blue-100 dark:text-blue-900 group-hover:text-primary/20 transition-colors">sailing</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">Plan VELERO</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Más control para PyMES en crecimiento.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$99.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-primary text-white font-bold text-center rounded-xl hover:bg-secondary transition-all duration-300 shadow-lg shadow-primary/30" href="#">Prueba Gratis 14 días</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Todo lo de ANCLA, más:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 1,500 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> 3 Usuarios</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 5 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Anexo F07</li>
+<li><span class="material-symbols-outlined">check_circle</span> Comprobación Recepcion DTE</li>
+<li><span class="material-symbols-outlined">check_circle</span> Cuatro Módulos Adicionales</li>
+</ul>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors">tsunami</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-2">MAREA DIGITAL</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Potencia total para alto volumen.</p>
+<div class="flex items-baseline mb-6">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$149.99</span>
+<span class="text-gray-500 dark:text-gray-400 ml-2">/ MES NO INCLUYE IVA</span>
+</div>
+<a class="block w-full py-3 px-6 bg-blue-50 dark:bg-blue-900/20 text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300" href="#">Contactar Ventas</a>
+<div class="mt-8">
+<p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Paquete Velero y Ancla más:</p>
+<ul class="check-list text-sm text-gray-600 dark:text-gray-300">
+<li><span class="material-symbols-outlined">check_circle</span> 2,500 DTEs Mensuales</li>
+<li><span class="material-symbols-outlined">check_circle</span> Usuarios Ilimitados</li>
+<li><span class="material-symbols-outlined">check_circle</span> Almacenamiento 20 GB (10 años)</li>
+<li><span class="material-symbols-outlined">check_circle</span> Todos los Módulos</li>
+<li><span class="material-symbols-outlined">check_circle</span> Actualizaciones</li>
+<li><span class="material-symbols-outlined">check_circle</span> Soporte Prioritario 24/7</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Nuestras Capacidades</h2>
+<h3 class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4">Todo lo que necesitas para escalar</h3>
+<p class="text-lg text-gray-600 dark:text-gray-400">En Oceans Bits no solo ofrecemos facturación electrónica: construimos ecosistemas digitales completos, alineados a las normativas del Ministerio de Hacienda y diseñados para crecer junto a tu negocio.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">devices</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Aplicaciones Web</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Aplicaciones web rápidas, rápidas y seguras construidas con frameworks modernos. Nos centramos en UX y rendimiento.
+                    </p>
+<a class="inline-flex items-center text-primary font-medium hover:text-secondary dark:hover:text-blue-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-2xl">smartphone</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Desarrollo Móvil</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Aplicaciones móviles nativas y multiplataforma para iOS y Android que mantienen a tus clientes conectados en todo momento.
+                    </p>
+<a class="inline-flex items-center text-purple-600 dark:text-purple-400 font-medium hover:text-purple-800 dark:hover:text-purple-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-teal-600 dark:text-teal-400 text-2xl">database</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Backend &amp; API</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Arquitectura sólida del lado del servidor y desarrollo de API para impulsar de manera confiable tus operaciones con gran volumen de datos.
+                    </p>
+<a class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:text-teal-800 dark:hover:text-teal-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400 text-2xl">shopping_cart</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">E-Commerce</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Tiendas en línea personalizadas e integración de pagos para ayudar a las empresas salvadoreñas a vender globalmente.
+                    </p>
+<a class="inline-flex items-center text-orange-600 dark:text-orange-400 font-medium hover:text-orange-800 dark:hover:text-orange-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-pink-600 dark:text-pink-400 text-2xl">brush</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">UI/UX Design</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Diseño centrado en el usuario que garantiza que tu software sea intuitivo, accesible y hermoso.
+                    </p>
+<a class="inline-flex items-center text-pink-600 dark:text-pink-400 font-medium hover:text-pink-800 dark:hover:text-pink-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400 text-2xl">cloud_done</span>
+</div>
+<h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Cloud Solutions</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Migración a la nube, configuración de alojamiento y prácticas de DevOps para mantener tu infraestructura resistente.
+                    </p>
+<a class="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 dark:hover:text-indigo-300" href="#">
+                        Leer más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-surface-light dark:bg-surface-dark py-16">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-primary rounded-3xl p-10 md:p-16 relative overflow-hidden text-center">
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-black opacity-10 rounded-full"></div>
+<h2 class="relative text-3xl md:text-4xl font-display font-bold text-white mb-6">¿Listo para digitalizar tu negocio?</h2>
+<p class="relative text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                    En Oceans Bits transformamos tus ideas en soluciones de software hechas a la medida, diseñadas para impulsar el crecimiento de tu empresa en El Salvador.
+                </p>
+<div class="relative flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-3 bg-white text-primary font-bold rounded-full hover:bg-gray-50 transition-colors shadow-lg" href="#">
+                        Obtén un presupuesto gratuito
+                    </a>
+<a class="px-8 py-3 bg-blue-700 text-white font-bold rounded-full hover:bg-blue-800 transition-colors border border-blue-500" href="#">
+                        Contacto con soporte técnico
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<footer class="bg-gray-50 dark:bg-black pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center mb-4">
+<img alt="Oceansbits Logo" class="h-8 w-auto mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV-bWzY237WwuLHHH_8nXNS2_AVPRcQCtLSViH5_FKUve77uoP4V0Q1e7rnU7pmT1guyA1B6mGUlFVR8042ufS8NkQAavaVUC2tvVpGkAtoK6dbbmFr-S6ctLgm9fNG2CqlrtYUwBZpofhf1Uj54WA7rq2SoQIJAeEFJoBgqG0toe3Vpm6DXNNaFeAcERDd5IfeM4Tkjr_OlqzK0ChzFPCLPonNc2tVka3iIPjImnMpvL0wjRqlYuzoRpcn3apv5JKX4tjYXxzIYY"/>
+<span class="font-display font-bold text-lg tracking-tight text-gray-900 dark:text-white">OCEANSBITS</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                        Liderando la transformación digital en El Salvador con soluciones de software de primera calidad.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Servicios</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Desarrollo Web</a></li>
+<li><a class="hover:text-primary" href="#">Aplicaciones móviles</a></li>
+<li><a class="hover:text-primary" href="#">Diseño UI/UX</a></li>
+<li><a class="hover:text-primary" href="#">Consultoria</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Compañia</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Sobre nosotros</a></li>
+<!--<li><a class="hover:text-primary" href="#">Careers</a></li>-->
+<!--<li><a class="hover:text-primary" href="#">Blog</a></li>-->
+<li><a class="hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4">Conecta</h4>
+<div class="flex space-x-4 mb-4">
+<a class="text-gray-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-gray-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+<p class="text-xs text-gray-500">San Miguel, El Salvador</p>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2026 Oceans Bits. Todos los derechos reservados.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#">Política de Privacidad</a>
+<a class="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white" href="#">Términos de Servicios</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/planes.js"></script>
+</body></html>
