@@ -23,6 +23,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Oceansbits"/>
 <link rel="apple-touch-icon" href="img/Recurso 1.png"/>
+<link rel="icon" href="img/Recurso 1.png" type="image/png"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -90,12 +91,23 @@
                     </a>
 </div>
 <div class="md:hidden flex items-center">
-<button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
+<button id="menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
+
 </div>
+
+<!-- Mobile menu (hidden by default, toggled via JS) -->
+<div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800">
+    <div class="flex flex-col space-y-2">
+        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Soluciones digitales</a>
+        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="about.html">Quiénes somos</a>
+        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="contact.html">Contacto</a>
+        <a class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-secondary transition-all shadow-lg shadow-primary/30" href="#">Facturar</a>
+    </div>
 </div>
+
 </nav>
 <main class="flex-1 flex flex-col items-center">
 <!-- Hero Section -->
@@ -254,5 +266,6 @@ Nos especializamos en <strong> a la medida, páginas web, facturación electrón
 </div>
 </footer>
 </div>
+<script src="js/nav.js"></script>
 <script src="js/pwa-register.js"></script>
 </body></html>
